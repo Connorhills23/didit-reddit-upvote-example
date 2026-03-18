@@ -41,13 +41,6 @@ export async function PostList({ currentPage = 1 }) {
     </>
   );
 
-  const [settings, setSettings] = useState({ postsPerPage: 10 });
-
-  useEffect(() => {
-    fetch("/api/user/settings")
-      .then((res) => res.json())
-      .then((data) => setSettings(data));
-  }, []);
-
+  
   const postsPerPage = settings.postsPerPage;
 }
