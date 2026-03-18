@@ -40,4 +40,14 @@ export async function PostList({ currentPage = 1 }) {
       <Pagination currentPage={currentPage} />
     </>
   );
+
+  const [settings, setSettings] = useState({ postsPerPage: 10 });
+
+  useEffect(() => {
+    fetch("/api/user/settings")
+      .then((res) => res.json())
+      .then((data) => setSettings(data));
+  }, []);
+
+  const postsPerPage = settings.postsPerPage;
 }

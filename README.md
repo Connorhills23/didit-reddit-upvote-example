@@ -19,24 +19,24 @@ The project is a work in progress and is not yet complete.
 
 ## Setup instructions
 
-1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine
-2. Run `npm install`
-3. Create a `.env.local` file in the root directory and add the following environment variables:
-   - `DATABASE_URL` - the URL of your Postgres database (eg. the Supabase connection string)
+1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine --done
+2. Run `npm install` --done
+3. Create a `.env.local` file in the root directory and add the following environment variables: --done
+   - `DATABASE_URL` - the URL of your Postgres database (eg. the Supabase connection string) --done
    - `AUTH_SECRET` - the Next Auth secret string (this can be anything at all like a password, but keep it secret!)
-   - `AUTH_GITHUB_ID` - the GitHub OAuth client ID (create yours in [Github developer settings](https://github.com/settings/developers)
-   - `AUTH_GITHUB_SECRET` - the GitHub OAuth client secret (create this in [Github developer settings](https://github.com/settings/developers))
-4. Create the database schema by running the SQL commands in `schema.sql` in your database (eg. by running the commands in Supabase Query Editor)
-5. Run `npm run dev` to start the development server
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the site
+   - `AUTH_GITHUB_ID` - the GitHub OAuth client ID (create yours in [Github developer settings](https://github.com/settings/developers) --done
+   - `AUTH_GITHUB_SECRET` - the GitHub OAuth client secret (create this in [Github developer settings](https://github.com/settings/developers)) --done
+4. Create the database schema by running the SQL commands in `schema.sql` in your database (eg. by running the commands in Supabase Query Editor) --done
+5. Run `npm run dev` to start the development server --done
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the site --done
 
 ## Potential future features
 
-- [ ] User profiles
-- [ ] Sorting posts by recent (date posted), top (most upvotes), and most controversial (most upvotes _and_ downvotes)
-- [ ] User karma scores
-- [ ] User badges / trophies (awards for achievements like number of posts, years on the site, etc.)
-- [ ] User settings (eg. number of posts per page, theme, etc.)
+- [x] User profiles
+- [x] Sorting posts by recent (date posted), top (most upvotes), and most controversial (most upvotes _and_ downvotes)
+- [x] User karma scores
+- [x] User badges / trophies (awards for achievements like number of posts, years on the site, etc.)
+- [x] User settings (eg. number of posts per page, theme, etc.)
 - [ ] Moderation tools / reporting or flagging objectionable comments for removable by admins
 - [ ] Searching posts (possibly using simple SQL LIKE '%some search%', or [Postgres text search](https://www.crunchydata.com/blog/postgres-full-text-search-a-search-engine-in-a-database))
 - [ ] Subreddits (separate communities, that isn't just one big list of posts, that can be created by users)

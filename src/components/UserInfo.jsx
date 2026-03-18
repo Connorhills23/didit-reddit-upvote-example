@@ -1,6 +1,7 @@
 import auth from "../app/middleware";
 import { LoginButton } from "./LoginButton";
 import { LogoutButton } from "./LogoutButton";
+import Link from "next/link";
 
 export async function UserInfo() {
   const session = await auth();
@@ -9,8 +10,10 @@ export async function UserInfo() {
     <div>
       {session ? (
         <div>
-          {session.user.name}{" "}
-          <span className="text-xs text-zinc-400 mr-3">#{session.user.id}</span>
+          {session?.user?.name}
+          <span className="text-xs text-zinc-400 mr-3">
+            #{session?.user?.id}
+          </span>
           <LogoutButton />
         </div>
       ) : (
@@ -21,4 +24,5 @@ export async function UserInfo() {
       )}
     </div>
   );
+  <Link href={`/user/${user.id}`}>My Profile</Link>;
 }
