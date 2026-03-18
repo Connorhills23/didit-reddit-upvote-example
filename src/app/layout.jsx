@@ -37,20 +37,5 @@ export default async function RootLayout({ children }) {
     </html>
   );
 
-  useEffect(() => {
-    fetch("/api/user/settings")
-      .then((res) => res.json())
-      .then((data) => {
-        document.documentElement.classList.toggle(
-          "dark",
-          data.theme === "dark",
-        );
-      });
-  }, []);
-
-  return (
-    <html>
-      <body>{children}</body>
-    </html>
-  );
+ 
 }
